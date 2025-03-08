@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.createCourse = createCourse;
 const create_course_service_1 = __importDefault(require("./create-course-service"));
 function createCourse(request, response) {
-    create_course_service_1.default.execute("NodeJS", 10, "Mayk");
+    create_course_service_1.default.execute({
+        name: 'NodeJS',
+        duration: 10,
+        educator: 'Dani'
+    });
     return response.send();
 }
